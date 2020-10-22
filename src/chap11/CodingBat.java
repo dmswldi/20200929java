@@ -20,6 +20,10 @@ public class CodingBat {
 		stringMatch2("iaxxai", "aaxxaaxx");
 		
 		
+		// 호출하는 함수가 static || 객체 생성 후 호출해야 함
+		// CodingBat cb = new CodingBat();
+		// System.out.println(cb.countYZ("fez day"));
+		System.out.println(countYZ("fez day"));
 	}
 	// how 1
 	public static int stringMatch(String a, String b) {
@@ -48,6 +52,18 @@ public class CodingBat {
 			}
 		}
 		  
+		return count;
+	}
+	
+	
+	
+	// countYZ
+	public static int countYZ(String str) {
+		String[] arr = str.split(" ");
+		int count = 0;
+		for(String s : arr) {
+			if(s.charAt(s.length()-1) == 'y' || s.charAt(s.length()-1) == 'z') count++;
+		}
 		return count;
 	}
 }

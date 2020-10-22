@@ -13,7 +13,7 @@ public class Memory {
 	
 	{
 		// 객체 생성 전 static 메소드 사용 가능
-		// static 변수오ㅑㅏ static 메소드는 객체 생성 이전에 이미 할당되어 있음. 바로 사용 가능
+		// static 변수와 static 메소드는 객체 생성 이전에 이미 할당되어 있음. 바로 사용 가능
 		Memory.add(1, 2);
 		// Memory.min(1, 2);
 		
