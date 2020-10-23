@@ -3,7 +3,13 @@ package chap11.classClass;
 public class NewInstanceEx {
 	public static void main(String[] args) {
 		try {
-			Class clazz = Class.forName("chap11.classClass.SendAction");
+			int i = 3;
+			String t = "chap11.classClass.ReceiveAction";
+			if (i > 2) { // 런타임 시 클래스 이름이 결정, 클래스 이름은 ReceiveAction or SendAction
+				t = "chap11.classClass.SendAction";
+			}
+			
+			Class clazz = Class.forName(t);
 			Class clazz2 = Class.forName("chap11.classClass.ReceiveAction");
 			// Class clazz3 = Class.forName("chap11.classClass.Action");
 			// newInstance()는 Object 타입 리턴(T 타입), 강제 타입 변환

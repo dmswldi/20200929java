@@ -29,6 +29,7 @@ public class HashCodeEx {
 		System.out.println(b2.hashCode());
 		System.out.println(b1.equals(b2)); // 재정의 안 하면 false, 하면 true
 		// hashCode() 재정의 후 equals() 재정의 해야 함
+		// hashCode() : 같은 객체인지 확인, equals() : 같은 내용인지 확인
 		
 		
 		System.out.println("---------");
@@ -76,7 +77,7 @@ class Book {
 	
 	@Override
 	public int hashCode() {
-		return barCode; // 같은 바코드를 넣으면 해시코드가 같게끔
+		return barCode; // 같은 바코드를 넣으면 해시코드가 같게끔-> 같은 객체로 인식
 	}
 
 	@Override
