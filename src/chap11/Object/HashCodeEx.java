@@ -1,6 +1,8 @@
 package chap11.Object;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class HashCodeEx {
 	public static void main(String[] args) {
@@ -21,7 +23,7 @@ public class HashCodeEx {
 		System.out.println(s2.hashCode());
 		System.out.println(s1.equals(s2)); // 내부 값 비교
 		
-		System.out.println("---------");
+		System.out.println("---------Book");
 		Book b1 = new Book(963);
 		Book b2 = new Book(963);
 		System.out.println(b1 == b2); // 다른 객체, 객체 번지 비교
@@ -31,6 +33,10 @@ public class HashCodeEx {
 		// hashCode() 재정의 후 equals() 재정의 해야 함
 		// hashCode() : 같은 객체인지 확인, equals() : 같은 내용인지 확인
 		
+		// self-text
+		Set<Book> shelf = new HashSet<>();  
+		shelf.add(new Book(200));
+		System.out.println(shelf.contains(new Book(200))); // hashCode 재정의 안 하면 false
 		
 		System.out.println("---------");
 		Member obj1 = new Member("blue");
@@ -57,6 +63,8 @@ public class HashCodeEx {
 		hashMap.put(k1, "홍길동");
 		
 		Key k2 = new Key(1);
+		System.out.println(k1);
+		System.out.println(k2);
 		System.out.println(k1.equals(k2)); // 넘버 같으면 equals
 		System.out.println(k1.hashCode()); // 객체 번지 리턴 -> 재정의 하면 넘버 리턴
 		System.out.println(k2.hashCode());
@@ -88,7 +96,10 @@ class Book {
 	// -> 원래는 다른 객체니까 해시코드가 달라서 (바코드가 같아도) equals가 false
 	// -> 해시코드, equals 재정의로 바코드가 같으면 같게 나오게
 	
-
+	// self-study
+	public int getBarcode() { return this.barCode; }
+	public void setBarcode(int barCode) { barCode = this.barCode; }
+	
 /*	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -158,8 +169,8 @@ class Key {
 	
 	// 추가: hashMap에서 해시코드값을 비교. 해시코드가 같으면 같은 Key 가리킴.
 	// 이걸 안 하면 같은 number를 가져도 다른 객체여서 not equals.
-//	@Override
-//	public int hashCode() {
-//		return number;
-//	}
+	@Override
+	public int hashCode() {
+		return number;
+	}
 }

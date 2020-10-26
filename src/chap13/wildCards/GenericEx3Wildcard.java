@@ -1,4 +1,4 @@
-package chap13.WildCards;
+package chap13.wildCards;
 
 public class GenericEx3Wildcard {
 	public static void main(String[] args) {
@@ -29,11 +29,11 @@ public class GenericEx3Wildcard {
 		// Student 하위 클래스를 new 할 수 ㅇ -> why? 우항에는 타입으로 Object, Person, Student를 받을 수 ㅇ, 그 어떤 값이 오든 
 		// 해당 타입의 하위 클래스를 new 할 수 있으니까
 		// =>> add는 wildCard로 상위 클래스 제한해서 객체 생성
-		courseW0.add(new HighStudent("a")); // 왜 되지??
+		courseW0.add(new HighStudent("a"));
 		courseW0.add(new Student("a"));
 		// courseW0.add(new Object()); // 이건 안 돼
 		// courseW0.add(new Person("park"));
-		Course<Object> co = (Course<Object>) courseW0;
+		Course<Object> co = (Course<Object>) courseW0; // 강제로 캐스팅
 		co.add(new Object()); // 이건 돼
 		
 		courseW1.add(new Student("a")); // 이게 가능

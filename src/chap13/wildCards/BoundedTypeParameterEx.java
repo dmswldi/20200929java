@@ -1,4 +1,6 @@
-package chap13;
+package chap13.wildCards;
+
+import chap13.Util;
 
 public class BoundedTypeParameterEx {// compare()는 <T extends Number> 타입
 	public static void main(String[] args) {

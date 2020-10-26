@@ -1,4 +1,4 @@
-package chap13.WildCards;
+package chap13.wildCards;
 
 public class Course<T> {
 	private String name;
