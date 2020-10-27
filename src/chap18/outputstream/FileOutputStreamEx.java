@@ -1,0 +1,27 @@
+package chap18.outputstream;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class FileOutputStreamEx {// 파일 복사
+	public static void main(String[] args) throws Exception {
+		String originalFileName
+			= "src/chap18/outputstream/FileOutputStreamEx.java";
+		String targetFileName = "src/chap18/outputstream/copy.txt";
+		
+		FileInputStream fis = new FileInputStream(originalFileName);
+		FileOutputStream fos = new FileOutputStream(targetFileName);
+		
+		int readByteNo;
+		byte[] readBytes = new byte[100];// 최대 100bytes까지 읽음
+		while( (readByteNo = fis.read(readBytes)) != -1) {
+			fos.write(readBytes, 0, readByteNo);
+		}
+		
+		fos.flush();// 변기 물 내리기: 쓰지 않고 미뤄뒀다 채운 거 쓰기
+		fos.close();
+		fis.close();
+		
+		System.out.println("복사가 잘 되었습니다");
+	}
+}

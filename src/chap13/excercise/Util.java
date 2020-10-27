@@ -2,7 +2,10 @@ package chap13.excercise;
 
 public class Util {
 
-	public static Integer getValue(Pair<String, Integer> pair, String string) {
+	public static <K, V> V getValue(Pair<K, V> pair, K k) {// �Ű������� Pair ����Ÿ��
+		if(pair.getKey() == k) {
+			return pair.getValue();
+		}
 		return null;
 	}
 
