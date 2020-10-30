@@ -27,6 +27,17 @@ public class NonSerializableParentEx {
 		ois.close(); fis.close();
 	}
 }
+/*
+ObjectOutputStream {
+	
+	final void writeObject(Object o) {
+		;;
+		;;
+		o.writeObject(this);
+		;;
+		
+	}
+}*/
 
 class Parent {
 	public String field1;

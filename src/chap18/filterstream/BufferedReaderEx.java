@@ -12,7 +12,8 @@ public class BufferedReaderEx {
 		BufferedReader br = new BufferedReader(reader);// 효율적으로 읽고
 		
 		System.out.print("입력> ");
-		String lineString = br.readLine();
+		String lineString = br.readLine();// 이 때 입력 받아
+		// BufferedReader(InputStreamReader(System.in)).readLine()
 		
 		System.out.println("출력: " + lineString);
 	}
