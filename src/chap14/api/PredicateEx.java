@@ -34,7 +34,8 @@ public class PredicateEx {// 람다식 풀어서 써보기!!!!!!!!!!
 	}
 	
 	
-	static class Student {// static 함수에서는 static(class)만 접근 가능 
+	static class Student {// static 함수에서는 static(class)만 접근 가능, static 선언으로 미리 메모리에 올려놓기
+		// static 아니면 PredicateEx 객체 생성 후 Student 객체 생성 가능!
 		private String name;
 		private String sex;
 		private int score;

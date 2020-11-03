@@ -14,8 +14,7 @@ public class OperatorEx {
 	}
 	
 	
-	public static void main(String[] args) {// 함수 안에 필드 정의 X...
-//		static int x = 2;//final만 된대 ...??? 중첩 어쩌고 다시 공부
+	public static void main(String[] args) {
 		int max = maxOrMin(
 			(a, b) -> {
 				if(a >= b) return a;

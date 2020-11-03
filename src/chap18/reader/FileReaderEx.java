@@ -9,13 +9,18 @@ public class FileReaderEx {// 주석 하이: 주석 없애고 확인해보기
 		
 		int readCharNo;
 		int sum = 0;
+//		String d = "";
 		char[] cbuf = new char[10];// 한글도 1char
 		while((readCharNo = fr.read(cbuf)) != -1) {// char 10개 받아서 읽음
 			String data = new String(cbuf, 0, readCharNo);// 배열, 해당 배열의 시작 위치, 길이
 			System.out.print(readCharNo + ":");
 			System.out.println(data);
 			sum += readCharNo; // 한글 포함 글자 하나당 +1
+			
+			// 방법 2
+//			d += String.copyValueOf(cbuf);
 		}
+//		System.out.println(d);
 		
 		fr.close();
 		

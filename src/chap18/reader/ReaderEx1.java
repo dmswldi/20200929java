@@ -9,7 +9,7 @@ import java.io.Reader;
 public class ReaderEx1 {
 	public static void main(String[] args) throws Exception {
 		String path = "src/chap18/reader/ReaderEx1.java";
-		Reader reader = new FileReader(path);// fr = new fr 이랑 r = new fr 차이 : 필메를 누구걸 쓸 거냐
+		Reader reader = new FileReader(path);// fr = new fr >이랑 r = new fr 차이 : 필메를 누구걸 쓸 거냐
 		
 		// 문자 단위로 읽기
 		int ch = reader.read(); // char 2byte, int 4byte -> 2byte만 채워서 리턴

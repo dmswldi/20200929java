@@ -9,13 +9,12 @@ public class FileInputStreamEx {
 				"src/chap18/inputstream/FileInputStreamEx.java");
 			int data;
 			while( (data = fis.read() ) != -1) {
-				System.out.write(data);
+				System.out.write(data);// 아스키코드, char로 안 감싸도 ok
 			}
 			fis.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 }
