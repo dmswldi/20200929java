@@ -16,6 +16,9 @@ public class Sample1 {
 		
 //		Consumer<String> o1 = (s) -> System.out.println(s);// Consumer ???
 //		names.forEach(o1);// ArrayList의 foreach(Consumer action)
-		names.forEach(s -> System.out.println(s));
+		names.forEach(s -> System.out.println(s)); // forEach(Consumer<? super E> action)
+		
 	}
 }
+
+

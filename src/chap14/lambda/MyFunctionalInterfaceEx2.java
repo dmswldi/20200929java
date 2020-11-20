@@ -18,10 +18,11 @@ public class MyFunctionalInterfaceEx2 {
 	}
 	
 	
-	@FunctionalInterface // Object의 public method나 default method는 ㅇㅋ
+	@FunctionalInterface // 추상 메소드가 하나, Object의 static method나 default method는 ㅇㅋ
 	interface MyFunctionalInterface {
 		public void method(int x);
 		default void method2() {}
+		static void method3() {}
 	}
 }
 

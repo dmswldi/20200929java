@@ -4,7 +4,7 @@ import java.util.function.IntSupplier;
 
 public class SupplierEx {
 	public static void main(String[] args) {
-		IntSupplier intSupplier = () -> {
+		IntSupplier intSupplier = () -> {// IntSupplier interface의 getAsInt() 재정의
 			int num = (int) (Math.random() * 6) + 1;
 			return num;
 		};

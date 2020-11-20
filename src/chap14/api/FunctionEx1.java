@@ -8,7 +8,7 @@ public class FunctionEx1 {
 		int i = strToint.apply("30");
 		System.out.println(i);
 		
-		Function<Integer, String> intTostr = x -> "값" + x;// Integer Type 받아서 Strign return
+		Function<Integer, String> intTostr = x -> "값" + x;// Integer Type 받아서 String return
 		String str = intTostr.apply(300);
 		System.out.println(str);
 	}

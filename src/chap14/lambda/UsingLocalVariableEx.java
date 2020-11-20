@@ -9,15 +9,11 @@ public class UsingLocalVariableEx {
 	
 }
 
-interface MyFunctionalInterface {
-	public void method();
-}
-
 class UsingLocalVariable {
-	void method(int arg) {// arg는 final (??0
+	void method(int arg) {
 		int localVar = 40;
 		
-//		arg = 31;
+//		arg = 31;// final이라 수정 불가
 //		localVar = 41;
 		
 		MyFunctionalInterface fi = () -> {
@@ -25,6 +21,10 @@ class UsingLocalVariable {
 			System.out.println("localVar: " + localVar + "\n");
 		};
 		fi.method();
+	}
+	
+	interface MyFunctionalInterface {
+		public void method();
 	}
 }
 

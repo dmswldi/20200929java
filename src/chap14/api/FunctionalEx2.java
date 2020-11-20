@@ -20,7 +20,7 @@ public class FunctionalEx2 {
 	}
 	
 	public static void main(String[] args) {
-		double englishAvg = avg(s -> s.getEnglishScore());// s는 Student 객체 -> applyAsInt(student.getEngilshScore())
+		double englishAvg = avg(s -> s.getEnglishScore());// s는 Student 객체 -> applyAsInt(student) -> return student.getEngilshScore()
 		System.out.println("영어 평균 점수: " + englishAvg);
 		
 		double mathAvg = avg(s -> s.getMathScore());

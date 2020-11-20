@@ -5,12 +5,14 @@ public class NestedEx1 {
 		final int i = 0;
 		
 		MyInterface i1 = () -> System.out.println("실행");
+		i1.method();
 		
 		MyInterface i2 = new MyInterface() {// 메소드 안 로컬 클래스
 			public void method() {
 				System.out.println("실행2" + i);// 여기서 인스턴스 필드 쓰면 걔는 final
 			};
 		};
+		i2.method();
 		
 		
 	}

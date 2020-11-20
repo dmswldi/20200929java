@@ -11,13 +11,14 @@ public class FunctionalEx1 {
 		new Student("신용권", 95, 93)
 	);
 	
+	// Function interface의 apply() 재정의하여 Student 타입 받아 String으로 리턴
 	public static void printString(Function<Student, String> function) {
 		for(Student student : list) {
 			System.out.println(function.apply(student) + " ");
 		}
 		System.out.println();
 	}
-	
+
 	public static void printInt(ToIntFunction<Student> function) {
 		for(Student student : list) {
 			System.out.println(function.applyAsInt(student) + " ");
@@ -27,9 +28,9 @@ public class FunctionalEx1 {
 	
 	public static void main(String[] args) {
 		System.out.println("[학생 이름]");
-		printString(t -> t.getName());// apply(t) -> apply(student.getName())
-		
-		System.out.println("[영어 점수]");// applyAsInt(studnet.getEnglishScore())
+		printString(t -> t.getName());// apply(t) -> return student.getName();
+		// 여기서는 apply()만 재정의하면 됨, return 정의
+		System.out.println("[영어 점수]");// applyAsInt(t) -> return studnet.getEnglishScore();
 		printInt(t -> t.getEnglishScore());
 		
 		System.out.println("[수학 점수]");

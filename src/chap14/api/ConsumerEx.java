@@ -7,7 +7,7 @@ import java.util.function.ObjIntConsumer;
 
 public class ConsumerEx {
 	public static void main(String[] args) {
-		Consumer<String> consumer =t -> System.out.println(t + "8"); 
+		Consumer<String> consumer = t -> System.out.println(t + "8"); 
 		consumer.accept("java");
 		
 		BiConsumer<String, String> bigConsumer = (t, u) -> System.out.println(t + u);
@@ -16,7 +16,7 @@ public class ConsumerEx {
 		DoubleConsumer doubleCounsumer = d -> System.out.println("java" + d); 
 		doubleCounsumer.accept(8.0);// accept() 매개변수가 double 타입
 		
-		ObjIntConsumer<String> objIntConsumer = (t, i) -> System.out.println("Java" + i);
+		ObjIntConsumer<String> objIntConsumer = (t, i) -> System.out.println(t + i);
 		objIntConsumer.accept("Java", 8);// <T, int> -> T 타입만 결정해주기
 	}
 }
