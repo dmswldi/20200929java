@@ -15,6 +15,7 @@ public class MethodRefEx1 {
 		
 		Supplier<Integer> nextInt = () -> rand.nextInt();
 		Supplier<Integer> nextInt2 = rand::nextInt;// Random::nextInt는 아니네
+		Supplier<Integer> nextInt3 = () -> new Random().nextInt();
 		
 		Supplier<Car> nextCar = () -> new Car();// 새로운 카 객체 리턴
 		Supplier<Car> nextCar2 = Car::new;

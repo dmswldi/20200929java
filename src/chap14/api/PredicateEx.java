@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class PredicateEx {// 람다식 풀어서 써보기!!!!!!!!!!
+public class PredicateEx {
 //	static PredicateEx p = new PredicateEx();// ...이게 되네?
 	private static List<Student> list = Arrays.asList(
 //			p.new Student("홍길동", "남자", 90),
