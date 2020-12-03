@@ -23,6 +23,7 @@ public class FunctionEx2 {
 		// k(T)에는 string, object 올 수 있고
 		// v(U)에는 int, number 올 수 있고
 		// 리턴값으로는 int의 자식들 <- v에 뭐가 오든 받을 수 있는 타입
+		// 리턴값은 결국 map의 value 값이 되므로 결국엔 Integer로 변환 가능해야 함
 		
 		map.forEach((k, v) -> System.out.println(k + ":" + v));
 		

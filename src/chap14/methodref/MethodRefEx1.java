@@ -19,9 +19,19 @@ public class MethodRefEx1 {
 		
 		Supplier<Car> nextCar = () -> new Car();// 새로운 카 객체 리턴
 		Supplier<Car> nextCar2 = Car::new;
+		System.out.println(nextCar2.get().getSpeed());
 	}
 }
 
 class Car {
+	private int speed;
 	
+	public Car() {
+		this.speed = 0;
+	}
+	public Car(int speed) {
+		this.speed = speed;
+	}
+	
+	public int getSpeed() { return speed; }
 }

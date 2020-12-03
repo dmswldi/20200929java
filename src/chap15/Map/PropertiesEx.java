@@ -1,4 +1,4 @@
-package chap15;
+package chap15.Map;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -14,7 +14,7 @@ public class PropertiesEx {
 		// 파일을 읽어서 map에 설정 파일(.properties)의 정보를 저장
 		// Class Properties : Map<Object,Object> -> key나 value가 String 아닌 건 discouraged
 	
-		Properties properties = new Properties(); // 여기에 (key, value) 쌍 저장, Map<Object,Object> 타입
+		Properties properties = new Properties(); // 여기에 (key, value) 쌍 저장, Map<String, String> 타입
 		
 		String path = PropertiesEx.class.getResource("database.properties").getPath();
 		path = URLDecoder.decode(path, "utf-8"); // throws UnsupportedEncodingException
